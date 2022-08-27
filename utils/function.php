@@ -1,7 +1,7 @@
 <?php
 function getTotalGaji($totalMasuk, $gajiPokok, $tunjangan)
 {
-    $jumlah = ($totalMasuk * $gajiPokok) + ($totalMasuk * $tunjangan);
+    $jumlah = ($totalMasuk * $gajiPokok +  $tunjangan);
 
     return $jumlah;
 
@@ -9,8 +9,8 @@ function getTotalGaji($totalMasuk, $gajiPokok, $tunjangan)
 
 function getPajak ($totalMasuk, $gajiPokok, $tunjangan)
 {
-	$PPH = 0.4;
-	$pajak = (($totalMasuk * $gajiPokok) + ($totalMasuk * $tunjangan)) * ($PPH/100);
+	$PPH = 5;
+	$pajak = (($totalMasuk * $gajiPokok +  $tunjangan)) * ($PPH/100);
 
 	return $pajak;
 }
@@ -18,10 +18,10 @@ function getPajak ($totalMasuk, $gajiPokok, $tunjangan)
 
 function getTotal ($totalMasuk, $gajiPokok, $tunjangan)
 {
-	$PPH = 0.4;
-	$pajak = (($totalMasuk * $gajiPokok) + ($totalMasuk * $tunjangan)) * ($PPH/100);
+	$PPH = 5;
+	$pajak = (($totalMasuk * $gajiPokok +  $tunjangan)) * ($PPH/100);
 
-	$jumlah = ($totalMasuk * $gajiPokok) + ($totalMasuk * $tunjangan);
+	$jumlah = ($totalMasuk * $gajiPokok +  $tunjangan);
 
 	$jamsostek = 141000;
 

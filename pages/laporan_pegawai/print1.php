@@ -1,6 +1,12 @@
 <?php
 
- $query = mysqli_query($koneksi, "SELECT laporan_gaji.id_laporan, laporan_gaji.total_masuk, laporan_gaji.tanggal_laporan, jabatan.*, pegawai.nama_pegawai FROM laporan_gaji JOIN jabatan ON jabatan.id_jabatan = laporan_gaji.jabatan_id JOIN pegawai ON pegawai.id_pegawai = laporan_gaji.pegawai_id ");
+ $query = mysqli_query($koneksi, "SELECT laporan_gaji.id_laporan, laporan_gaji.total_masuk, 
+	laporan_gaji.tanggal_laporan, jabatan.*, pegawai.nama_pegawai 
+	FROM laporan_gaji JOIN jabatan 
+	ON jabatan.id_jabatan = laporan_gaji.jabatan_id JOIN pegawai 
+	ON pegawai.id_pegawai = laporan_gaji.pegawai_id ");
+
+$tgl=date('d-m-Y');
 
 ?>
 <html>
@@ -18,9 +24,16 @@ th, td {
 </style>
 <center>
 <body>
-<br>
-<br>
-<h1>Laporan Gaji Karyawan</h1>
+<p style="float: left;">PT. Tiffany Damai Sejahtera</p>
+        <p style="float: right;"> Tanggal :  <?= $tgl;?> </p>
+        <br><br>
+        <p style="float: left;">Jl. Dewi Sartika Ciputat</p>
+        <p style="float: right;"> Telpon : (021) 7470-8449</p> 
+
+        <h5 align="center">Laporan Gaji Karyawan</h5>
+
+
+        <hr>
 
 <table border="1">
 	<tr >

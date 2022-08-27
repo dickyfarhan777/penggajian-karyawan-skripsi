@@ -61,12 +61,24 @@ if (!$_SESSION['login']) {
     include "./pages/laporan_pegawai/index.php";
   } else if (isset($_GET['slip_gaji'])) {
     include "./pages/laporan_pegawai/slip_gaji.php";
+  } else if (isset($_GET['complain'])) {
+    include "./pages/laporan_pegawai/complain.php";
   } else if (isset($_GET['hapus_laporan'])) {
     include "./pages/laporan_pegawai/hapus.php";
   } else if (isset($_GET['laporan_gaji1'])) {
     include "./pages/laporan_pegawai/print1.php";
   } else if (isset($_GET['laporan_gaji'])) {
     include "./pages/laporan_pegawai/print.php";
+  } else if (isset($_GET['data_complain'])) {
+    include "./pages/data_complain/index.php";
+  } else if (isset($_GET['selesai_complain'])) {
+    include "./pages/data_complain/selesai.php";
+  } else if (isset($_GET['data_admin'])) {
+    include "./pages/data_admin/index.php";
+  } else if (isset($_GET['edit_admin'])) {
+    include "./pages/data_admin/edit.php";
+  } else if (isset($_GET['hapus_admin'])) {
+    include "./pages/data_admin/hapus.php";
   } else if (isset($_GET['logout'])) {
     include "./login/logout.php";
   } else {

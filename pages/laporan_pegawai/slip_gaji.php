@@ -1,7 +1,8 @@
 <?php
 $id = $_GET['id'];
-$query = mysqli_query($koneksi, "SELECT * FROM laporan_gaji l LEFT JOIN pegawai p ON p.id_pegawai = l.pegawai_id LEFT JOIN jabatan j ON j.id_jabatan = l.jabatan_id  WHERE id_laporan = '$id'");
+$query = mysqli_query($koneksi, "SELECT * FROM laporan_gaji l LEFT JOIN pegawai p ON p.id_pegawai = l.pegawai_id LEFT JOIN jabatan j ON j.id_jabatan = l.jabatan_id WHERE id_laporan = '$id'");
 $data = mysqli_fetch_assoc($query);
+$tgl=date('d-m-Y');
 ?>
 
 <html>
@@ -18,12 +19,12 @@ $data = mysqli_fetch_assoc($query);
         <p style="float: left;">Jl. Dewi Sartika Ciputat</p>
         <p style="float: right;"> Telpon : (021) 7470 – 8449</p> 
 
-        <h1 align="center">Slip Gaji</h1>
+        <h2 align="center">Slip Gaji</h2>
 
 
         <hr>
         <img style="float: left;" src="asstes/images/1.png" width="50" height="50">
-        <p align="left">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Nama Karyawan :  <?= $data['nama_pegawai']; ?> </p>
+        <p align="left">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Nama Karyawan :  <?= $data['nama_pegawai'] ?> </p>
         <p align="left">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Jabatan :  <?= $data["nama_jabatan"] ?> </p>  
 
         

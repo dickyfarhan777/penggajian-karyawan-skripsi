@@ -14,7 +14,7 @@ if (isset($_POST['submit'])) {
 <main class="app-content">
     <div class="app-title">
         <div>
-            <h1><i class="fa fa-th-list"></i> Laporan Karyawan</h1>
+            <h1><i class="fa fa-th-list"></i> Laporan Gaji Karyawan</h1>
         </div>
     </div>
     <div class="row">
@@ -31,6 +31,7 @@ if (isset($_POST['submit'])) {
                     <a target="_blank" href="index.php?laporan_gaji1" class="btn btn-outline-primary float-right mb-3"> Print  </a>
                 <?php } else {  
                     $id_pegawai = $_SESSION['login']['id_pegawai']; ?>
+                    <a target="_blank" href="index.php?complain&id=<?= $id_pegawai['pegawai_id'] ?>" class="btn btn-outline-primary float-left mb-3"> Complain  </a>
                     <a target="_blank" href="index.php?laporan_gaji&id=<?= $id_pegawai['pegawai_id'] ?>" class="btn btn-outline-primary float-right mb-3"> Print  </a>
 
                 <?php } ?>

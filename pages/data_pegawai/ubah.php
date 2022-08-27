@@ -47,7 +47,7 @@ $data = mysqli_fetch_assoc($query);
                             </div>
                         </div>
                         <div class="form-group float-right">
-                            <button type="button" class="btn btn-secondary" data-dismiss="modal">Batal</button>
+                        <a href="index.php?data_pegawai" class="btn btn-secondary" onclick ="return confirm('Yakin ubah data dibatalkan?');">Batal</a> </td>
                             <button type="submit" name="submit" class="btn btn-primary">Simpan</button>
                         </div>
                     </form>

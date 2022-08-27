@@ -1,6 +1,7 @@
 <?php
 
  $query = mysqli_query($koneksi, "SELECT * FROM jabatan");
+ $tgl=date('d-m-Y');
 
 ?>
 <html>
@@ -18,9 +19,16 @@ th, td {
 </style>
 <center>
 <body>
-<br>
-<br>
-<h1>Data Jabatan Karyawan</h1>
+<p style="float: left;">PT. Tiffany Damai Sejahtera</p>
+        <p style="float: right;"> Tanggal :  <?= $tgl;?> </p>
+        <br><br>
+        <p style="float: left;">Jl. Dewi Sartika Ciputat</p>
+        <p style="float: right;"> Telpon : (021) 7470-8449</p> 
+
+        <h3 align="center">Data Jabatan</h3>
+
+
+        <hr>
 
 <table border="1">
 	<tr >

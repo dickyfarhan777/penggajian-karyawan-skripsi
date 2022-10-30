@@ -1,2 +1,0 @@
-# penggajian-karyawan-skripsi
-
